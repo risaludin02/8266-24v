@@ -103,10 +103,10 @@ client.on("message", (topic, payload) => {
   // VOLTASE (sesuai firmware ESP)
   // ===========================
   if (topic === "risal_esp8266/tele/V0")
-    updateVolt(vAEl, "V0", msg);
+    updateVolt(vAEl, "B1", msg);
 
   if (topic === "risal_esp8266/tele/V1")
-    updateVolt(vBEl, "V1", msg);
+    updateVolt(vBEl, "B2", msg);
 
   if (topic === "risal_esp8266/tele/V2")
     updateVolt(vCEl, "VBAT", msg);
@@ -172,4 +172,5 @@ document.getElementById("pb2")
 document.getElementById("pb4")
   .addEventListener("click", () =>
   publishCmd("V8", "1")
+
   );
